@@ -5,7 +5,9 @@ module.exports = function(eleventyConfig) {
       "src/content/projects/*.md"
     );
   });
-
+eleventyConfig.addPassthroughCopy({
+  "src/css": "css"
+});
   return {
     dir: {
       input: "src",

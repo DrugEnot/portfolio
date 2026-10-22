@@ -1,37 +1,45 @@
 ---
 title: Portfolio
 ---
-
 <!doctype html>
 <html lang="ru">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Game Design Portfolio</title>
+  <link rel="stylesheet" href="{{ '/css/style.css' | url }}">
 </head>
 <body>
-  <h1>Мои проекты</h1>
+  <header class="site-header">
+    <div class="container">
+      <h1>Game Design Portfolio</h1>
+    </div>
+  </header>
 
-  <main>
-    {% for project in collections.projects %}
-      <article>
-        <h2>{{ project.data.title }}</h2>
-        <p>{{ project.data.period }}</p>
-        <p>{{ project.data.description }}</p>
+  <main class="container">
+    <section class="gallery" aria-label="Проекты">
+      {% for project in collections.projects %}
+        <article class="project-card">
+          <div class="project-cover">
+            <span>{{ project.data.title }}</span>
+          </div>
 
-        <h3>Роли</h3>
-        <ul>
-          {% for role in project.data.roles %}
-            <li>{{ role }}</li>
-          {% endfor %}
-        </ul>
+          <h2 class="project-title">
+            {{ project.data.title }}
+          </h2>
 
-        <div>
-          {{ project.templateContent | safe }}
-        </div>
-      </article>
-      <hr>
-    {% endfor %}
+          <p class="project-meta">
+            {{ project.data.period }}
+          </p>
+
+          <div class="project-tags">
+            {% for role in project.data.roles %}
+              <span class="project-tag">{{ role }}</span>
+            {% endfor %}
+          </div>
+        </article>
+      {% endfor %}
+    </section>
   </main>
 </body>
 </html>
