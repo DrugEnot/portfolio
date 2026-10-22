@@ -1,0 +1,25 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio website for game design, level design and narrative design projects.",
+  "main": "index.js",
+ "scripts": {
+  "start": "eleventy --serve",
+  "build": "eleventy"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DrugEnot/portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/DrugEnot/portfolio/issues"
+  },
+  "homepage": "https://github.com/DrugEnot/portfolio#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.7"
+  }
+}
