@@ -149,3 +149,40 @@ body {
     padding: 20px;
   }
 }
+.gallery-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 28px;
+}
+
+.filter-button {
+  padding: 8px 16px;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  color: var(--text);
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.filter-button:hover {
+  background: var(--surface);
+}
+
+.filter-button.is-active {
+  background: var(--text);
+  color: #fff;
+  border-color: var(--text);
+}
+
+.filter-button:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 3px;
+}
+
+/* Гарантируем, что скрытые карточки не занимают места */
+.project-card[hidden] {
+  display: none;
+}

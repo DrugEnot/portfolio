@@ -18,6 +18,13 @@ title: Portfolio
   </header>
 
   <main class="container">
+<nav class="gallery-filters" aria-label="Фильтр проектов">
+  <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">Все</button>
+  <button class="filter-button" type="button" data-filter="GD" aria-pressed="false">GD</button>
+  <button class="filter-button" type="button" data-filter="LD" aria-pressed="false">LD</button>
+  <button class="filter-button" type="button" data-filter="ND" aria-pressed="false">ND</button>
+  <button class="filter-button" type="button" data-filter="PM" aria-pressed="false">PM</button>
+</nav>
     <section class="gallery" aria-label="Проекты">
       {% for project in collections.projects %}
         <article class="project-card">
