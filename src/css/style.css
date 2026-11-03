@@ -106,3 +106,46 @@ body {
     aspect-ratio: 3 / 4;
   }
 }
+
+.project-cover {
+  width: 100%;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.project-cover:hover {
+  background: #e7e7e7;
+}
+
+.project-cover:focus-visible {
+  outline: 2px solid #242424;
+  outline-offset: 3px;
+}
+
+.project-cover[aria-expanded="true"] {
+  border-color: #777;
+}
+
+.project-details {
+  grid-column: 1 / -1;
+  min-width: 0;
+  padding: 28px 32px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: #fff;
+}
+
+.project-details h2 {
+  margin-top: 0;
+}
+
+.project-details p {
+  max-width: 75ch;
+}
+
+@media (max-width: 560px) {
+  .project-details {
+    padding: 20px;
+  }
+}

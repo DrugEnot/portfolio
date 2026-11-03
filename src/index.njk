@@ -8,6 +8,7 @@ title: Portfolio
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Game Design Portfolio</title>
   <link rel="stylesheet" href="{{ '/css/style.css' | url }}">
+  <script src="{{ '/js/gallery.js' | url }}" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -20,9 +21,14 @@ title: Portfolio
     <section class="gallery" aria-label="Проекты">
       {% for project in collections.projects %}
         <article class="project-card">
-          <div class="project-cover">
+          <button
+            class="project-cover"
+            type="button"
+            aria-expanded="false"
+            aria-controls="project-details"
+          >
             <span>{{ project.data.title }}</span>
-          </div>
+          </button>
 
           <h2 class="project-title">
             {{ project.data.title }}
@@ -37,6 +43,10 @@ title: Portfolio
               <span class="project-tag">{{ role }}</span>
             {% endfor %}
           </div>
+
+          <template class="project-template">
+            {{ project.templateContent | safe }}
+          </template>
         </article>
       {% endfor %}
     </section>
