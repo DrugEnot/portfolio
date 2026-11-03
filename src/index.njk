@@ -69,6 +69,23 @@ title: Portfolio
     </div>
   </header>
 
+{% if project.data.artifacts and project.data.artifacts.length %}
+<section class="case-artifacts" aria-label="Материалы проекта">
+  <h3 class="case-artifacts-title">Ключевые материалы</h3>
+
+  <ul class="case-artifacts-list">
+    {% for artifact in project.data.artifacts %}
+      <li>
+        <a class="case-artifact" href="{{ artifact.url }}">
+          <span class="case-artifact-name">{{ artifact.title }}</span>
+          <span class="case-artifact-type">{{ artifact.type }}</span>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+
   <div class="case-content">
     {{ project.templateContent | safe }}
   </div>
