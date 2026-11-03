@@ -36,21 +36,15 @@ function renderDetails() {
 
   const lastCard = rowCards[rowCards.length - 1];
 
-  const title = activeCard.querySelector(
-    ".project-title"
-  ).textContent.trim();
+  
+const template = activeCard.querySelector(
+  ".project-template"
+);
 
-  const template = activeCard.querySelector(
-    ".project-template"
-  );
+details.replaceChildren(
+  template.content.cloneNode(true)
+);
 
-  const heading = document.createElement("h2");
-  heading.textContent = title;
-
-  details.replaceChildren(
-    heading,
-    template.content.cloneNode(true)
-  );
 
   lastCard.insertAdjacentElement("afterend", details);
 }

@@ -186,3 +186,66 @@ body {
 .project-card[hidden] {
   display: none;
 }
+
+/* Шапка раскрытого кейса */
+
+.case-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  padding-bottom: 28px;
+  margin-bottom: 28px;
+  border-bottom: 1px solid var(--border);
+}
+
+.case-header-main {
+  min-width: 0;
+}
+
+.case-title {
+  margin: 0 0 8px;
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.case-period {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.case-description {
+  margin: 0;
+  max-width: 65ch;
+  font-size: 16px;
+}
+
+.case-roles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.case-content {
+  max-width: 75ch;
+}
+
+.case-content > :first-child {
+  margin-top: 0;
+}
+
+@media (max-width: 560px) {
+  .case-header {
+    flex-direction: column;
+    gap: 16px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+
+  .case-title {
+    font-size: 24px;
+  }
+}
