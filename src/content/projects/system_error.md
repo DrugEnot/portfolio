@@ -5,6 +5,13 @@ roles:
   - GD
   - ND
 description: "Образовательный детектив в Discord"
+artifacts:
+  - title: "Схема расследования"
+    type: "diagram"
+    url: "#"
+  - title: "Пример игрового материала"
+    type: "document"
+    url: "#"
 ---
 
 ## Задача
