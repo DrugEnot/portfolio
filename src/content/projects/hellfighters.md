@@ -5,6 +5,7 @@ roles:
   - LD
   - GD
 description: "Кооперативная игра с акцентом на взаимодействие игроков"
+cover: "/images/hellfighters-poster.png"
 ---
 
 ## Задача

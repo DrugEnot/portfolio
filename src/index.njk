@@ -30,12 +30,23 @@ title: Portfolio
         <article class="project-card">
           <button
             class="project-cover"
-            type="button"
-            aria-expanded="false"
-            aria-controls="project-details"
-          >
-            <span>{{ project.data.title }}</span>
-          </button>
+          type="button"
+         aria-expanded="false"
+        aria-controls="project-details"
+        >
+           {% if project.data.cover %}
+             <img
+             class="project-cover-image"
+             src="{{ project.data.cover | url }}"
+             alt=""
+             loading="lazy"
+             decoding="async"
+             >
+           {% else %}
+         <span>{{ project.data.title }}</span>
+         {% endif %}
+        </button>
+
 
           <h2 class="project-title">
             {{ project.data.title }}
